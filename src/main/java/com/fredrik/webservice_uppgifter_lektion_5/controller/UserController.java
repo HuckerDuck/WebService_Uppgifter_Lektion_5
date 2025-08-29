@@ -21,18 +21,19 @@ public class UserController {
     }
 
     @GetMapping("/badrequest")
-
     public ResponseEntity<String> getBadRequest(){
-
-
         return ResponseEntity.badRequest().build();
     }
 
     @GetMapping("/internalservererror")
-
     public ResponseEntity<String> getInternalServerError(){
         return ResponseEntity.internalServerError().build();
     }
+    @GetMapping("/notfound")
+    public ResponseEntity<String> getNotFoundError(){
+        return ResponseEntity.notFound().build();
+    }
+
 
 
 }
